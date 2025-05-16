@@ -48,7 +48,7 @@
 
 // - error will be throw from p2,
 
-// TODO: Promise.any() - wait for first success,
+// TODO: Promise.any() - wait for first success, seeking for first success,
 
 // Promise.any([p1, p2, p3]); 3s it's maximum time taken to completed all three API calls
 //                    |   |   |
@@ -57,3 +57,7 @@
 
 // return the first success alone,
 // what if everything fails - AggregateError [err1, err2, err3];
+
+// promise settleted - got the result; status from here
+
+// it can either be (success, fulfilled, resolved) or (rejected, reject, failure);
