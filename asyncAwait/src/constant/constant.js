@@ -1,1 +1,1 @@
-export const GITHUB_API = "https://api.github.com/users/Pavithravignesh";
+export const GITHUB_API = "https://api.github.com/users/Pavithravisdfgnesh";
