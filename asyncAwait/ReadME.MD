@@ -4,3 +4,5 @@
 # what is await?
 - a keyword, only be used inside you're async fn(); 
 # how async works behind te scenes?
+
+# what's the differences between using async await and older way of hanlding the asynchronous operation
