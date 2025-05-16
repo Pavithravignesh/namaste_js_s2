@@ -1,6 +1,7 @@
 # what is async?
 - a keyword, used before the declaration of a function to create asynchrounous fn();
 - async fn's always return a promise, like.. mostly of the use cases, we developer return promise from a async fn(); even you're return a string from it, the async will wrapping the returned value/statement/output with the promise automatically
+ 
 # what is await?
 - a keyword, only be used inside you're async fn(); which suspend the execution of the function at the very line until unless that line resolve or reject.
 
@@ -22,3 +23,7 @@
 
 function execution is suspended
 
+# what should i use on which use case?
+- every async operation will be ultimately return you the promise, so, you can handle it using then, catch as well as as you wise if you want to run API call's parallelly go up with promise chaining, as it providing the API like's... Promise.all(), Promise.allSettleted(), Promise.race() and Promise.any()!
+
+- However, async and wait or the most effectient and best way to do things more modern! 
