@@ -5,13 +5,13 @@ const str = "returnStr";
 const pr = new Promise((resolve, reject) => {
     setTimeout(() => {
         resolve("promised value");
-    }, 3000);
+    }, 10000);
 });
 
 const pr2 = new Promise((resolve, reject) => {
     setTimeout(() => {
         resolve("promised value");
-    }, 2000);
+    }, 20000);
 });
 
 // async function returnStr() {
@@ -24,19 +24,20 @@ const pr2 = new Promise((resolve, reject) => {
 // using await with async - this combo is used to handle promise's
 // however, how thing's has been before async await?
 
-async function getDataNormally() {
-    // // older way handling async
-    // pr.then((data) => console.log(data)); // 2nd
-    // console.log("first") // 1st
-    // using await with async
-    // TODO: JS engine was waiting for promise to resolved
-    const output = await pr; // line of execution starts to waits here, all the below await call where executed as the time sums up, if the following await having 2s of delay, the second call will be executed 2s after the following execution
-    console.log(output); // 1st - delay 1s; if it's first call and having delay higher the all the following then all those which follows will wait,
-    console.log("first"); // 2nd
+function getDataNormally() {
+    console.log("hello world!!") // 1st
+    // older way handling async
+    pr.then((data) => console.log(data)); // 3rd
+    console.log("first") // 2nd
+    // // using await with async
+    // // TODO: JS engine was waiting for promise to resolved
+    // const output = await pr; // line of execution starts to waits here, all the below await call where executed as the time sums up, if the following await having 2s of delay, the second call will be executed 2s after the following execution
+    // console.log(output); // 1st - delay 1s; if it's first call and having delay higher the all the following then all those which follows will wait,
+    // console.log("first"); // 2nd
 
-    const output2 = await pr2; // delay - 2s, executed 1s after the first await call,
-    console.log(output2); // 3rd
-    console.log("second"); // 4th
+    // const output2 = await pr2; // delay - 2s, executed 1s after the first await call,
+    // console.log(output2); // 3rd
+    // console.log("second"); // 4th
 
 }
 getDataNormally();
